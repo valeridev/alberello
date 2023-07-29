@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -250,8 +254,11 @@
                 grid-template-columns: 1fr 1fr 1fr;
             }
 
+
+
             .websites {
-                margin-top: 60px;
+                margin-top: 10px;
+                margin-bottom: 40px;
             }
 
             .card {
@@ -305,17 +312,20 @@
                 color: green;
             }
 
-            .reservation {
-                background: #a9251e;
-                ;
 
-            }
 
             .reservation a {
-                color: white;
+                color: black;
                 /* Set the link color to white */
                 text-decoration: none;
             }
+
+
+            .final {
+                background-image: linear-gradient(to bottom, #F6F3EB, white);
+            }
+
+
 
             @media (max-width: 900px) {
                 header {
@@ -355,7 +365,7 @@
                 }
 
                 .websites {
-                    margin-top: 40px;
+                    margin-top: 10px;
                 }
 
                 .grid {
@@ -421,7 +431,7 @@
         <header>
             <div class="header-overlay"></div>
             <h3>Welcome</h3>
-            <h1>Alberello Restaurant</h1>
+            <h1>Alberello</h1>
             <h2>
                 In the heart of Bexley Village
             </h2>
@@ -557,10 +567,43 @@
 
 
 
-        <footer style=" padding: 60px 0;">
-            <section class="grid grid-footer" style="display: flex; justify-content: center;">
-                <div class="column" style="text-align: center;">
-                    <h1 style="color: black; letter-spacing: 0.3em;">More Info</h1>
+        <footer style=" padding: 10px 0;">
+
+            <div class="reservation" style="padding: 10px 0;">
+                <h4 style="color: black; margin:30px; text-align: center; ">Reservation</h4>
+                <p style="color: black;  margin:30px; text-align: center;">To make a reservation, you can contact us
+                    through
+                    the following options:</p>
+                <ul style="list-style: none; padding: 0; text-align: center; color:black">
+                    <li style="display: block; margin-bottom: 10px;">
+
+                        <i class="far fa-envelope"></i> <!-- Font Awesome email icon -->
+                        <a href="mailto:reservation@example.com">reservation@example.com</a>
+                    </li>
+                    <br />
+                    <li>
+                        <i class="fas fa-phone-alt"></i> <!-- Font Awesome phone icon -->
+                        <a href="tel:+44 7711 896881">+44 7711 896881</a>
+                    </li>
+                    <br />
+                    <li>
+                        <i class="fab fa-whatsapp"></i> <!-- Font Awesome WhatsApp icon -->
+                        <a href="https://wa.me/+44 7711 896881">What's App</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+
+
+
+
+        </footer>
+        <div class=" final">
+            <section class="grid grid-footer" style="display: flex; justify-content: center; ">
+                <div class=" column" style="text-align: center;">
+                    <h4 style="color: black; letter-spacing: 0.3em; padding-top: 30px;">More Info</h4>
                     <ul style="list-style-type: none; padding: 0;">
                         <li style="margin: 10px 0;">
                             <a href="https://www.google.com/maps?q=80+Bexley+High+St%2C+Bexley+DA5+1LB" target="_blank"
@@ -569,34 +612,34 @@
                         </li>
                         <li style="margin: 10px 0;">
                             <a href="https://www.tripadvisor.co.uk/Restaurant_Review-g1076982-d2435820-Reviews-Alberello_Italian_restaurant-Bexley_Greater_London_England.html"
-                                target="_blank" style="color:black; text-decoration: none;">Trip Advisor</a>
+                                target="_blank" style="color:black; text-decoration: none;">Tripadvisor</a>
                         </li>
                     </ul>
                 </div>
             </section>
-        </footer>
 
 
-
-
-
-        <div class="sharing" style="padding: 40px;">
-            <h4
-                style="display: flex; align-items: center; justify-content: center; color: black; letter-spacing: 0.3em;">
-                Share ♡
-            </h4>
-            <div style="display: flex; align-items: center; justify-content: center;">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://url.netlify.app/" target="_blank"
-                    style="margin-right: 10px;">
-                    <i class="fab fa-facebook" style="color: gray; font-size: 24px; transition: transform 0.2s;"></i>
-                </a>
-                <a href="https://twitter.com/intent/tweet?url=https://url.netlify.app/" target="_blank"
-                    style="margin-right: 10px;">
-                    <i class="fab fa-twitter" style="color: gray; font-size: 24px; transition: transform 0.2s;"></i>
-                </a>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://url.netlify.app/" target="_blank">
-                    <i class="fab fa-linkedin" style="color: gray; font-size: 24px; transition: transform 0.2s;"></i>
-                </a>
+            <div class="sharing" style="padding: 40px;">
+                <h4
+                    style="display: flex; align-items: center; justify-content: center; color: black; letter-spacing: 0.3em;">
+                    Share ♡
+                </h4>
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://url.netlify.app/" target="_blank"
+                        style="margin-right: 10px;">
+                        <i class="fab fa-facebook"
+                            style="color: gray; font-size: 24px; transition: transform 0.2s;"></i>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=https://url.netlify.app/" target="_blank"
+                        style="margin-right: 10px;">
+                        <i class="fab fa-twitter" style="color: gray; font-size: 24px; transition: transform 0.2s;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://url.netlify.app/"
+                        target="_blank">
+                        <i class="fab fa-linkedin"
+                            style="color: gray; font-size: 24px; transition: transform 0.2s;"></i>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -606,35 +649,18 @@
 
 
 
-
-        <div class="reservation" style="padding: 60px 0;">
-            <h3 style="color: white; margin:30px; text-align: center; ">Reservation</h3>
-            <p style="color: white;  margin:30px; text-align: center;">To make a reservation, you can contact us
-                through
-                the following options:</p>
-            <ul style="list-style: none; padding: 0; text-align: center; color:black">
-                <li style="display: block; margin-bottom: 10px;">
-
-                    <i class="far fa-envelope"></i> <!-- Font Awesome email icon -->
-                    <a href="mailto:reservation@example.com">reservation@example.com</a>
-                </li>
-                <li>
-                    <i class="fas fa-phone-alt"></i> <!-- Font Awesome phone icon -->
-                    <a href="tel:+44 7711 896881">+44 7711 896881</a>
-                </li>
-                <li>
-                    <i class="fab fa-whatsapp"></i> <!-- Font Awesome WhatsApp icon -->
-                    <a href="https://wa.me/+44 7711 896881">What's App</a>
-                </li>
-            </ul>
-        </div>
-  <small>2023 Coded by <a href="https://www.linkedin.com/in/v%C3%A1leri-calhau-9279b927a/" target="_blank"
+        <small>2023 Coded by <a href="https://www.linkedin.com/in/v%C3%A1leri-calhau-9279b927a/" target="_blank"
                 style="text-decoration: none; color: #14954B;">Váleri Calhau<span style="color: black;">
-                    &copy;</span></a></small>
+                    &copy;</span>
+            </a>
+        </small>
+
+
+
+
     </body>
 
 </html>
 
 
 
-</html>
