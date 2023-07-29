@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Noto+Serif+Display:ital,wght@1,200&family=PT+Mono&family=Tilt+Prism&family=Urbanist:wght@100&display=swap"
+            rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/e9dc0bc112.js" crossorigin="anonymous"></script>
+        <meta property="og:title" content="Your Website Title">
+        <meta property="og:description" content="Your website description here">
+        <meta property="og:image" content="URL_TO_YOUR_WEBSITE_IMAGE">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Your Website Title">
+        <meta name="twitter:description" content="Your website description here">
+        <meta name="twitter:image" content="URL_TO_YOUR_WEBSITE_IMAGE">
+
+        <style>
+            /* Body Styles */
+            body {
+                font-family: 'PT Mono', monospace;
+                background-color: #f7f3eb;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+
+            :root {
+                --primary-font: "Roboto", sans-serif;
+                --header-font: "Playfair Display", serif;
+                --sub-heading-font: "Poppins", sans-serif;
+                --primary-color: whitesmoke;
+                --secondary-color: black;
+                --primary-hover-color: rgba(255, 255, 255, 0.4);
+                --secondary-hover-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .news-scroll {
+                font-size: 20px;
+                font-weight: bold;
+                color: #c43b31;
+                overflow: hidden;
+                white-space: nowrap;
+                text-align: center;
+                animation: marquee-scroll 20s linear infinite;
+            }
+
+            .news-scroll a {
+                color: #c43b31;
+                text-decoration: none;
+            }
+
+            .news-scroll a:hover {
+                text-decoration: underline;
+            }
+
+            .navbar {
+                background-color: #d9c9bb;
+                padding: 10px;
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            a[href="#more"] {
+                display: inline-block;
+                background-color: #c43b31;
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                margin-top: 20px;
+                transition: background-color 0.3s;
+            }
+
+            a[href="#more"]:hover {
+                background-color: #af3329;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                /* White background for the container */
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+                /* Optional box-shadow for an elegant touch */
+            }
+
+            .image-container {
+
+                width: 100%;
+                height: auto;
+                display: block;
+                max-width: 600px;
+                /* Set a maximum width for the container */
+                margin: 0 auto;
+                /* Center the container horizontally */
+                margin-bottom: 20px;
+                overflow: hidden;
+                margin-bottom: 20px;
+                filter: brightness(70%);
+                /* Apply default darkness to the image */
+                transition: filter 0.3s;
+                /* Add a smooth transition effect */
+            }
+
+            .image-container img {
+                width: 100%;
+                height: auto;
+                display: block;
+                filter: brightness(70%) contrast(120%) saturate(120%) blur(1px);
+                padding-bottom: 5px;
+            }
+
+            section {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+
+            header {
+
+                background-image: linear-gradient(rgba(39, 32, 68, 0.7),
+                        rgba(39, 32, 68, 0.7)), url('mainimg.png');
+                text-align: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 100%;
+                margin: 0 auto;
+                padding: 20% 0;
+            }
+
+            h1 {
+                font-family: var(--header-font);
+                font-size: 100px;
+                margin: 10px auto;
+                color: white;
+            }
+
+            h2 {
+                font-family: var(--primary-font);
+                font-weight: 300;
+                font-size: 32px;
+                color: white;
+            }
+
+            h3 {
+                font-family: var(--sub-heading-font);
+                font-weight: 700;
+                font-size: 20px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                color: white;
+            }
+
+            header a {
+                color: var(--secondary-color);
+                font-family: var(--sub-heading-font);
+                font-size: 14px;
+                letter-spacing: 3px;
+                text-decoration: none;
+                text-transform: uppercase;
+                border: none;
+                background-color: var(--primary-color);
+                padding: 16px 32px;
+                display: inline-block;
+                margin-top: 30px;
+            }
+
+            header a:hover {
+                color: var(--primary-color);
+                background-color: var(--primary-hover-color);
+                transition: ease-in-out 300ms;
+            }
+
+            main {
+                margin: 40px 0;
+                text-align: center;
+                line-height: 1.5;
+            }
+
+            main h1 {
+                font-size: 48px;
+            }
+
+            main h3 {
+                font-size: 13px;
+                line-height: 1.5;
+            }
+
+            main img {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            footer {
+                background-image: linear-gradient(to right, #009246, #ffffff, #ce2b37);
+                padding: 60px 0;
+
+
+
+            }
+
+            footer ul {
+                list-style-type: none;
+            }
+
+            footer .grid {
+                grid-column-gap: 40px;
+            }
+
+            footer h1 {
+                font-size: 24px;
+            }
+
+            footer a {
+                color: var(--primary-color);
+            }
+
+            footer a:hover {
+                color: var(--hover-color);
+                transition: ease-in-out 100ms;
+            }
+
+            .grid {
+                display: grid;
+                grid-column-gap: 20px;
+            }
+
+            .grid-footer {
+                grid-template-columns: 1fr 2fr 1fr;
+            }
+
+            .grid-2-columns {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .grid-3-even-columns {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            .websites {
+                margin-top: 60px;
+            }
+
+            .card {
+                position: relative;
+                aspect-ratio: 1 / 1;
+                background-color: var(--secondary-color);
+                transition: transform 1500ms;
+                transform-style: preserve-3d;
+            }
+
+            .card-container:hover>.card {
+                transform: rotatey(180deg);
+            }
+
+            .front,
+            .back {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                text-decoration: none;
+                color: var(--primary-color);
+                font-family: var(--sub-heading-font);
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                backface-visibility: hidden;
+            }
+
+            .back {
+                transform: rotateY(180deg);
+            }
+
+            .card a {
+                font-size: 42px;
+                color: var(--primary-color);
+            }
+
+            .about {
+                text-align: end;
+                margin-top: 40px;
+                /* Add margin to create space */
+            }
+
+            .whatsapp-icon {
+                font-size: 24px;
+                margin-right: 5px;
+                color: green;
+            }
+
+            .reservation {
+                background: #a9251e;
+                ;
+
+            }
+
+            .reservation a {
+                color: white;
+                /* Set the link color to white */
+                text-decoration: none;
+            }
+
+            @media (max-width: 900px) {
+                header {
+                    padding: 10% 0;
+                }
+
+                h1 {
+                    font-size: 42px;
+                }
+
+                h2 {
+                    font-size: 18px;
+                }
+
+                h3 {
+                    font-size: 12px;
+                }
+
+                header a {
+                    font-size: 10px;
+                    letter-spacing: 2px;
+                    padding: 10px 20px;
+                    margin-top: 10px;
+                }
+
+                main {
+                    margin: 10px 0px;
+                }
+
+                footer {
+                    text-align: center;
+                    padding: 0 10px;
+                }
+
+                .about {
+                    text-align: center;
+                }
+
+                .websites {
+                    margin-top: 40px;
+                }
+
+                .grid {
+                    grid-template-columns: 1fr;
+                    grid-row-gap: 3px;
+                }
+
+                .about h1,
+                .websites h1,
+                .videos h1,
+                footer h1 {
+                    font-size: 24px;
+                }
+
+                .front,
+                .back {
+                    text-align: center;
+                    font-size: 14px;
+                }
+
+                .card a {
+                    font-size: 20px;
+                }
+
+                .card {
+                    aspect-ratio: 5 / 1;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .navbar {
+                    display: block;
+                    text-align: center;
+                }
+
+            }
+
+            @media (max-width: 900px) {
+                header {
+                    padding: 10% 0;
+                }
+
+                h1 {
+                    font-size: 42px;
+                }
+
+                h2 {
+                    font-size: 18px;
+                }
+
+                h3 {
+                    font-size: 12px;
+                }
+
+                main {
+                    margin: 10px 0px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="header-overlay"></div>
+            <h3>Welcome</h3>
+            <h1>Alberello Restaurant</h1>
+            <h2>
+                In the heart of Bexley Village
+            </h2>
+            <a href="#more">Learn More</a>
+
+        </header>
+        <main>
+            <div class="container mt-5">
+                <div class="row">
+                    <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();"
+                        onmouseout="this.start();"> 🌴 Alberello Summer Break 🌴 We will be closed from August 1st until
+                        August
+                        15th for our annual holiday. Book now to secure your spot before we're off! We will reopen on
+                        August
+                        16th. Sorry for any inconvenience caused.
+                        We look forward to seeing you soon.
+                    </marquee>
+                </div>
+            </div>
+
+            <section class="about" id="more">
+                <div class="grid grid-2-columns">
+                    <div class="column">
+
+                        <h3 style="color:black">about</h3>
+                        <h1 style="color:black">Alberello Restaurant</h1>
+                        <p>Welcome to Alberello, a hidden treasure nestled in the heart of Bexley Village. Step into
+                            a
+                            world
+                            where the timeless
+                            allure of Italian traditions intertwines with the finest British culinary delights.
+
+                            At Alberello, we take great pride in curating a menu that celebrates the authentic
+                            essence
+                            of
+                            Italian cuisine while also
+                            embracing the rich flavors of British favorites. Prepare to embark on a gastronomic
+                            journey
+                            like
+                            no other.
+
+                            Savor the succulence of our Roast Leg of British Lamb, a hearty and cherished Sunday
+                            roast
+                            that
+                            pays homage to the best
+                            of British culinary heritage. Each tender morsel is lovingly prepared, ensuring a
+                            symphony
+                            of
+                            flavors that will leave
+                            you longing for more.
+
+                            Delight in the exquisite taste of our Fresh Dover Sole, a delectable dish that brings
+                            the
+                            essence of the sea to your
+                            plate. Our skilled chefs artfully prepare this delicate fish, allowing the natural
+                            flavors
+                            to
+                            shine, and creating a
+                            culinary experience that is simply unparalleled.
+
+                            To complement your meal, our wine selection is a masterpiece in itself, with wines
+                            carefully
+                            chosen to enhance every
+                            dish and suit every palate. From classic Italian varietals to exquisite British labels,
+                            our
+                            collection promises to
+                            elevate your dining experience to new heights.
+
+                            At Alberello, we invite you to savor the best of both worlds. Join us as we marry
+                            Italian
+                            traditions with the finest
+                            British ingredients, creating an unforgettable dining experience that will captivate
+                            your
+                            senses
+                            and leave you with
+                            cherished memories.
+
+                            We look forward to welcoming you to our warm and inviting restaurant, where the flavors
+                            of
+                            Italy
+                            and Britain dance
+                            harmoniously on your palate.
+
+                            Buon appetito and cheers to a delightful culinary adventure!
+                        </p>
+                    </div>
+                    <div class="column">
+                        <div class="image-container">
+                            <img src="salad.png" alt="main meal" />
+                            <img src="interior.png" alt="party at Albarello" />
+                            <div class="image-overlay">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="websites">
+                <div class="grid grid-3-even-columns">
+                    <div class="card-container">
+                        <div class="column card">
+                            <div class="front">
+                                Mains
+                            </div>
+                            <div class="back">
+                                <a href="mains.html" target="_blank">Explore Our Mains
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                        <div class="column card">
+                            <div class="front">Starters</div>
+                            <div class="back">
+                                <a href="starters.html" target="_blank">Discover Starters</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-container">
+                        <div class="column card">
+                            <div class="front">
+                                Desserts
+                            </div>
+                            <div class="back">
+                                <a href="desserts.html" target="_blank">Indulge in
+                                    Desserts</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+        <footer style=" padding: 60px 0;">
+            <section class="grid grid-footer" style="display: flex; justify-content: center;">
+                <div class="column" style="text-align: center;">
+                    <h1 style="color: black; letter-spacing: 0.3em;">More Info</h1>
+                    <ul style="list-style-type: none; padding: 0;">
+                        <li style="margin: 10px 0;">
+                            <a href="https://www.google.com/maps?q=80+Bexley+High+St%2C+Bexley+DA5+1LB" target="_blank"
+                                style="color: black; text-decoration: none;">Location</a>
+
+                        </li>
+                        <li style="margin: 10px 0;">
+                            <a href="https://www.tripadvisor.co.uk/Restaurant_Review-g1076982-d2435820-Reviews-Alberello_Italian_restaurant-Bexley_Greater_London_England.html"
+                                target="_blank" style="color:black; text-decoration: none;">Trip Advisor</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </footer>
+
+
+
+
+
+        <div class="sharing" style="padding: 40px;">
+            <h4
+                style="display: flex; align-items: center; justify-content: center; color: black; letter-spacing: 0.3em;">
+                Share ♡
+            </h4>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://url.netlify.app/" target="_blank"
+                    style="margin-right: 10px;">
+                    <i class="fab fa-facebook" style="color: gray; font-size: 24px; transition: transform 0.2s;"></i>
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://url.netlify.app/" target="_blank"
+                    style="margin-right: 10px;">
+                    <i class="fab fa-twitter" style="color: gray; font-size: 24px; transition: transform 0.2s;"></i>
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://url.netlify.app/" target="_blank">
+                    <i class="fab fa-linkedin" style="color: gray; font-size: 24px; transition: transform 0.2s;"></i>
+                </a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="reservation" style="padding: 60px 0;">
+            <h3 style="color: white; margin:30px; text-align: center; ">Reservation</h3>
+            <p style="color: white;  margin:30px; text-align: center;">To make a reservation, you can contact us
+                through
+                the following options:</p>
+            <ul style="list-style: none; padding: 0; text-align: center; color:black">
+                <li style="display: block; margin-bottom: 10px;">
+
+                    <i class="far fa-envelope"></i> <!-- Font Awesome email icon -->
+                    <a href="mailto:reservation@example.com">reservation@example.com</a>
+                </li>
+                <li>
+                    <i class="fas fa-phone-alt"></i> <!-- Font Awesome phone icon -->
+                    <a href="tel:+44 7711 896881">+44 7711 896881</a>
+                </li>
+                <li>
+                    <i class="fab fa-whatsapp"></i> <!-- Font Awesome WhatsApp icon -->
+                    <a href="https://wa.me/+44 7711 896881">What's App</a>
+                </li>
+            </ul>
+        </div>
+
+    </body>
+
+</html>
+
+
+
+</html>
