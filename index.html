@@ -1,14 +1,10 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Landing Page For Alberello Restaurant in Bexley Village</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -17,8 +13,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/e9dc0bc112.js" crossorigin="anonymous"></script>
-        <meta property="og:title" content="Your Website Title">
-        <meta property="og:description" content="Your website description here">
+        <meta property="og:title" content="Alberello Restaurant in Bexley Village">
+        <meta property="og:description" content="Traditional Italian Cousine">
         <meta property="og:image" content="URL_TO_YOUR_WEBSITE_IMAGE">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Your Website Title">
@@ -26,7 +22,6 @@
         <meta name="twitter:image" content="URL_TO_YOUR_WEBSITE_IMAGE">
 
         <style>
-            /* Body Styles */
             body {
                 font-family: 'PT Mono', monospace;
                 background-color: #f7f3eb;
@@ -36,13 +31,9 @@
             }
 
             :root {
-                --primary-font: "Roboto", sans-serif;
-                --header-font: "Playfair Display", serif;
-                --sub-heading-font: "Poppins", sans-serif;
-                --primary-color: whitesmoke;
-                --secondary-color: black;
-                --primary-hover-color: rgba(255, 255, 255, 0.4);
-                --secondary-hover-color: rgba(0, 0, 0, 0.4);
+                --primary-font: "Roboto";
+                --header-font: "Playfair Display";
+                --sub-heading-font: "Poppins";
             }
 
             .news-scroll {
@@ -58,10 +49,6 @@
             .news-scroll a {
                 color: #c43b31;
                 text-decoration: none;
-            }
-
-            .news-scroll a:hover {
-                text-decoration: underline;
             }
 
             .navbar {
@@ -89,6 +76,7 @@
 
             a[href="#more"]:hover {
                 background-color: #af3329;
+                color: white;
             }
 
             .container {
@@ -96,23 +84,18 @@
                 margin: 0 auto;
                 padding: 20px;
                 background-color: #fff;
-                /* White background for the container */
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-                /* Optional box-shadow for an elegant touch */
+                box-shadow: 0 2px 4px 0 rgba(76, 9, 3, 0.9);
             }
 
             .image-container {
-
                 width: 100%;
                 height: auto;
                 display: block;
                 max-width: 600px;
-                /* Set a maximum width for the container */
                 margin: 0 auto;
                 /* Center the container horizontally */
                 margin-bottom: 20px;
                 overflow: hidden;
-                margin-bottom: 20px;
                 filter: brightness(70%);
                 /* Apply default darkness to the image */
                 transition: filter 0.3s;
@@ -134,13 +117,12 @@
             }
 
             header {
-
                 background-image: linear-gradient(rgba(39, 32, 68, 0.7),
                         rgba(39, 32, 68, 0.7)), url('mainimg.png');
                 text-align: center;
                 background-size: cover;
                 background-repeat: no-repeat;
-                background-position:center center;
+                background-position: center center;
                 width: 100%;
                 margin: 0 auto;
                 padding: 20% 0;
@@ -161,6 +143,8 @@
             }
 
             h3 {
+                font-size: 13px;
+                line-height: 1.5;
                 font-family: var(--sub-heading-font);
                 font-weight: 700;
                 font-size: 20px;
@@ -170,37 +154,20 @@
             }
 
             header a {
-                color: var(--secondary-color);
                 font-family: var(--sub-heading-font);
                 font-size: 14px;
                 letter-spacing: 3px;
                 text-decoration: none;
                 text-transform: uppercase;
                 border: none;
-                background-color: var(--primary-color);
                 padding: 16px 32px;
                 display: inline-block;
                 margin-top: 30px;
             }
 
-            header a:hover {
-                color: var(--primary-color);
-                background-color: var(--primary-hover-color);
-                transition: ease-in-out 300ms;
-            }
-
             main {
                 margin: 40px 0;
                 text-align: center;
-                line-height: 1.5;
-            }
-
-            main h1 {
-                font-size: 48px;
-            }
-
-            main h3 {
-                font-size: 13px;
                 line-height: 1.5;
             }
 
@@ -212,9 +179,6 @@
             footer {
                 background-image: linear-gradient(to right, #009246, #ffffff, #ce2b37);
                 padding: 60px 0;
-
-
-
             }
 
             footer ul {
@@ -229,13 +193,10 @@
                 font-size: 24px;
             }
 
-            footer a {
-                color: var(--primary-color);
-            }
-
             footer a:hover {
-                color: var(--hover-color);
-                transition: ease-in-out 100ms;
+                color: #12944A;
+                text-decoration-line: underline;
+                transition: ease-in-out 200ms;
             }
 
             .grid {
@@ -255,8 +216,6 @@
                 grid-template-columns: 1fr 1fr 1fr;
             }
 
-
-
             .websites {
                 margin-top: 10px;
                 margin-bottom: 40px;
@@ -265,7 +224,7 @@
             .card {
                 position: relative;
                 aspect-ratio: 1 / 1;
-                background-color: var(--secondary-color);
+                background-color: black;
                 transition: transform 1500ms;
                 transform-style: preserve-3d;
             }
@@ -285,7 +244,7 @@
                 align-items: center;
                 font-size: 30px;
                 text-decoration: none;
-                color: var(--primary-color);
+                color: white;
                 font-family: var(--sub-heading-font);
                 letter-spacing: 3px;
                 text-transform: uppercase;
@@ -298,7 +257,7 @@
 
             .card a {
                 font-size: 42px;
-                color: var(--primary-color);
+                color: white;
             }
 
             .about {
@@ -307,31 +266,22 @@
                 /* Add margin to create space */
             }
 
-            .whatsapp-icon {
-                font-size: 24px;
-                margin-right: 5px;
-                color: green;
-            }
-
-
-
             .reservation a {
                 color: black;
-                /* Set the link color to white */
                 text-decoration: none;
             }
 
+            .sharing a:hover {
+                transform: scale(1.2);
+                transition: transform 200ms;
+            }
 
             .final {
                 background-image: linear-gradient(to bottom, #F6F3EB, white);
             }
 
-
-
             @media (max-width: 900px) {
-                header {
-                    padding: 10% 0;
-                }
+
 
                 h1 {
                     font-size: 42px;
@@ -394,17 +344,7 @@
                 .card {
                     aspect-ratio: 5 / 1;
                 }
-            }
 
-            @media (max-width: 768px) {
-                .navbar {
-                    display: block;
-                    text-align: center;
-                }
-
-            }
-
-            @media (max-width: 900px) {
                 header {
                     padding: 10% 0;
                 }
@@ -412,17 +352,13 @@
                 h1 {
                     font-size: 42px;
                 }
+            }
 
-                h2 {
-                    font-size: 18px;
-                }
 
-                h3 {
-                    font-size: 12px;
-                }
-
-                main {
-                    margin: 10px 0px;
+            @media (max-width: 768px) {
+                .navbar {
+                    display: block;
+                    text-align: center;
                 }
             }
         </style>
@@ -430,14 +366,12 @@
 
     <body>
         <header>
-            <div class="header-overlay"></div>
             <h3>.Welcome.</h3>
             <h1>Alberello</h1>
             <h2>
                 In the heart of Bexley Village
             </h2>
             <a href="#more">Learn More</a>
-
         </header>
         <main>
             <div class="container mt-5">
@@ -452,11 +386,9 @@
                     </marquee>
                 </div>
             </div>
-
             <section class="about" id="more">
                 <div class="grid grid-2-columns">
                     <div class="column">
-
                         <h3 style="color:black">about</h3>
                         <h1 style="color:black">Alberello Restaurant</h1>
                         <p>Welcome to Alberello, a hidden treasure nestled in the heart of Bexley Village. Step into
@@ -523,15 +455,24 @@
                         <div class="image-container">
                             <img src="salad.png" alt="main meal" />
                             <img src="interior.png" alt="party at Albarello" />
-                            <div class="image-overlay">
-                            </div>
                         </div>
                     </div>
                 </div>
+
             </section>
 
             <section class="websites">
                 <div class="grid grid-3-even-columns">
+                    <div class="card-container">
+                        <div class="column card">
+                            <div class="front">
+                                Starters
+                            </div>
+                            <div class="back">
+                                <a href="starters.html" target="_blank">Discover Starters</a>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card-container">
                         <div class="column card">
                             <div class="front">
@@ -540,14 +481,6 @@
                             <div class="back">
                                 <a href="mains.html" target="_blank">Explore Our Mains
                                 </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-container">
-                        <div class="column card">
-                            <div class="front">Starters</div>
-                            <div class="back">
-                                <a href="starters.html" target="_blank">Discover Starters</a>
                             </div>
                         </div>
                     </div>
@@ -565,11 +498,7 @@
                 </div>
             </section>
         </main>
-
-
-
         <footer style=" padding: 10px 0;">
-
             <div class="reservation" style="padding: 10px 0;">
                 <h4 style="color: black; margin:30px; text-align: center; letter-spacing: 0.3em; ">Reservation</h4>
                 <p style="color: black;  margin:30px; text-align: center;">To make a reservation, you can contact us
@@ -577,31 +506,23 @@
                     the following options:</p>
                 <ul style="list-style: none; padding: 0; text-align: center; color:black">
                     <li style="display: block; margin-bottom: 10px;">
-
-                        <i class="far fa-envelope"></i> <!-- Font Awesome email icon -->
+                        <i class="far fa-envelope"></i>
                         <a href="mailto:reservation@example.com">reservation@example.com</a>
                     </li>
                     <br />
                     <li>
-                        <i class="fas fa-phone-alt"></i> <!-- Font Awesome phone icon -->
+                        <i class="fas fa-phone-alt"></i>
                         <a href="tel:+44 7711 896881">+44 7711 896881</a>
                     </li>
                     <br />
                     <li>
-                        <i class="fab fa-whatsapp"></i> <!-- Font Awesome WhatsApp icon -->
+                        <i class="fab fa-whatsapp"></i>
                         <a href="https://wa.me/+44 7711 896881">What's App</a>
                     </li>
                 </ul>
             </div>
-
-
-
-
-
-
-
         </footer>
-        <div class=" final">
+        <div class="final">
             <section class="grid grid-footer" style="display: flex; justify-content: center; ">
                 <div class=" column" style="text-align: center;">
                     <h4 style="color: black; letter-spacing: 0.3em; padding-top: 30px;">More Info</h4>
@@ -609,7 +530,6 @@
                         <li style="margin: 10px 0;">
                             <a href="https://www.google.com/maps?q=80+Bexley+High+St%2C+Bexley+DA5+1LB" target="_blank"
                                 style="color: black; text-decoration: none;">Location</a>
-
                         </li>
                         <li style="margin: 10px 0;">
                             <a href="https://www.tripadvisor.co.uk/Restaurant_Review-g1076982-d2435820-Reviews-Alberello_Italian_restaurant-Bexley_Greater_London_England.html"
@@ -618,47 +538,32 @@
                     </ul>
                 </div>
             </section>
-
-
             <div class="sharing" style="padding: 40px;">
                 <h4
                     style="display: flex; align-items: center; justify-content: center; color: black; letter-spacing: 0.3em;">
                     Share ♡
                 </h4>
-                <div style="display: flex; align-items: center; justify-content: center;">
+                <div style="display: flex; align-items: center; justify-content: center;  ">
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://url.netlify.app/" target="_blank"
-                        style="margin-right: 10px;">
-                        <i class="fab fa-facebook"
-                            style="color: gray; font-size: 24px; transition: transform 0.2s;"></i>
+                        rel="noopener" style="margin-right: 10px;">
+                        <i class="fab fa-facebook" style="color: gray; font-size: 24px;"></i>
                     </a>
                     <a href="https://twitter.com/intent/tweet?url=https://url.netlify.app/" target="_blank"
-                        style="margin-right: 10px;">
-                        <i class="fab fa-twitter" style="color: gray; font-size: 24px; transition: transform 0.2s;"></i>
+                        rel="noopener" style="margin-right: 10px;">
+                        <i class="fab fa-twitter" style="color: gray; font-size: 24px;"></i>
                     </a>
                     <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://url.netlify.app/"
-                        target="_blank">
-                        <i class="fab fa-linkedin"
-                            style="color: gray; font-size: 24px; transition: transform 0.2s;"></i>
+                        target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin" style="color: gray; font-size: 24px;"></i>
                     </a>
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
         <small>2023 Coded by <a href="https://www.linkedin.com/in/v%C3%A1leri-calhau-9279b927a/" target="_blank"
                 style="text-decoration: none; color: #14954B;">Váleri Calhau<span style="color: black;">
                     &copy;</span>
             </a>
         </small>
-
-
-
-
     </body>
 
 </html>
